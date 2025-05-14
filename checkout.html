@@ -16,7 +16,7 @@
   <button id="checkout-button">Pay Now</button>
 
   <script>
-    const stripe = Stripe("pk_live_51ROj8kDOwWoPJ1167g3EwCErDdPgnqiIIOrPEQA3irJwjDBRQd5KdzGcSyVFMj8dHpVrJt44TKjrCgW6G22GVgu000IqRvQDbK"); // TODO: Replace this with your real publishable key
+    const stripe = Stripe("pk_test_51ROj8kDOwWoPJ1167g3EwCErDdPgnqiIIOrPEQA3irJwjDBRQd5KdzGcSyVFMj8dHpVrJt44TKjrCgW6G22GVgu000IqRvQDbK"); // TODO: Replace this with your real publishable key
 
     document.getElementById("checkout-button").addEventListener("click", async () => {
       const items = [
