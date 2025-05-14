@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Support Form – Byte Bolt Computers</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #1c1c1c;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,188,212,0.2);
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background: #00bcd4;
+      color: #111;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #4dd0e1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 onclick="location.href='index.html'">Byte Bolt Computers</h1>
+    <nav>
+      <a href="new-pc.html">New PC</a>
+      <a href="refurbished-pc.html">Refurbished PC</a>
+      <a href="workstation-pc.html">Workstation PC</a>
+      <a href="offers.html">Offers</a>
+      <a href="tech-support.html" class="active">Tech Support</a>
+      <a href="cart.html">Cart</a>
+</nav>
+  </header>
+  <main>
+    <section class="section center">
+      <h2>Tech Support Request</h2>
+      <form action="https://formspree.io/f/xwpowwba" method="POST">
+        <label for="problem">Description of the Problem</label>
+        <textarea id="problem" name="problem_description" rows="5" required></textarea>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone_number" placeholder="e.g., 555-555-5555" />
+
+        <input type="submit" value="Submit Request" />
+      </form>
+    </section>
+  </main>
+</body>
+</html>

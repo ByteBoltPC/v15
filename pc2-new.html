@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PC 2 – Byte Bolt Computers</title>
+<link href="style.css" rel="stylesheet"/>
+<script>
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(product + " added to cart!");
+}
+</script>
+</head>
+<body>
+<header>
+<h1 onclick="location.href='index.html'">Byte Bolt Computers</h1>
+<nav>
+<a class="active" href="new-pc.html">New PC</a>
+<a href="refurbished-pc.html">Refurbished PC</a>
+<a href="workstation-pc.html">Workstation PC</a>
+<a href="offers.html">Offers</a>
+<a href="tech-support.html">Tech Support</a>
+<a href="cart.html">Cart</a>
+</nav>
+</header>
+<main class="section center">
+<h2>PC 2</h2>
+<div style="background: #333; height: 300px; border-radius: 8px; margin: 2rem auto; display: flex; align-items: center; justify-content: center;">
+<span>[Placeholder Slideshow]</span>
+</div>
+<p>Work in progress – full specs and photos coming soon.</p>
+<a class="button add-to-cart" data-name="PC 2 (New)" data-price="699" href="#">Add to Cart</a>
+</main>
+<script src="cart.js"></script></body>
+</html>

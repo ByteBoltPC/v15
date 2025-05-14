@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Refurbished Gaming Rig – Ryzen 7 & RX 6500 XT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Byte Bolt Logo" style="height: 50px;" />
+    <h1 onclick="location.href='index.html'">Byte Bolt Computers</h1>
+    <nav>
+      <a href="new-pc.html">New PC</a>
+      <a href="refurbished-pc.html" class="active">Refurbished PC</a>
+      <a href="workstation-pc.html">Workstation PC</a>
+      <a href="offers.html">Offers</a>
+      <a href="tech-support.html">Tech Support</a>
+      <a href="cart.html">Cart</a>
+</nav>
+  </header>
+  <main class="section">
+    <h2>Refurbished Gaming Rig – Ryzen 7 & RX 6500 XT</h2>
+    <div class="slideshow">
+      <img class="slide" src="pc1a.jpg" style="display: block;" />
+      <img class="slide" src="pc1b.jpg" />
+      <img class="slide" src="pc1c.jpg" />
+    </div>
+    <ul>
+      <li><strong>Motherboard:</strong> ASUS TUF Gaming X570-Plus WiFi</li>
+      <li><strong>CPU:</strong> AMD Ryzen 7</li>
+      <li><strong>GPU:</strong> AMD RX 6500 XT</li>
+      <li><strong>RAM:</strong> 16GB Corsair DDR4</li>
+      <li><strong>Storage:</strong> 512GB NVMe SSD</li>
+    </ul>
+  </main>
+  <script>
+    let slides = document.getElementsByClassName("slide");
+    let currentSlide = 0;
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].style.display = "block";
+    }
+    setInterval(showSlides, 2000);
+  </script>
+</body>
+</html>

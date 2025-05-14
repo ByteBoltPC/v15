@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refurbished PC 1 – Byte Bolt Computers</title>
+<link href="style.css" rel="stylesheet"/>
+<script>
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(product + " added to cart!");
+}
+</script>
+</head>
+<body>
+<header>
+<h1 onclick="location.href='index.html'">Byte Bolt Computers</h1>
+<nav>
+<a href="new-pc.html">New PC</a>
+<a class="active" href="refurbished-pc.html">Refurbished PC</a>
+<a href="workstation-pc.html">Workstation PC</a>
+<a href="offers.html">Offers</a>
+<a href="tech-support.html">Tech Support</a>
+<a href="cart.html">Cart</a>
+</nav>
+</header>
+<main class="section">
+<h2>Refurbished PC 1</h2>
+<div class="slideshow" style="max-width: 600px; margin: auto; border-radius: 8px; overflow: hidden;">
+<div class="mySlides" style="display: block; height: 300px; background-color: #444; text-align: center; line-height: 300px;">[Slide 1]</div>
+<div class="mySlides" style="display: none; height: 300px; background-color: #555; text-align: center; line-height: 300px;">[Slide 2]</div>
+<div class="mySlides" style="display: none; height: 300px; background-color: #666; text-align: center; line-height: 300px;">[Slide 3]</div>
+</div>
+<p style="margin-top: 2rem;">
+      This refurbished gaming rig is built for smooth 1080p performance. Featuring a Ryzen 7 CPU and RX 6500 XT GPU,
+      it’s perfect for eSports, streaming, and everyday use. Fully tested and cleaned with a fresh install of Windows.
+    </p>
+<div class="center">
+<a class="button add-to-cart" data-name="Refurbished Rig 1" data-price="399" href="#">Add to Cart</a>
+</div>
+</main>
+<script>
+    let slides = document.getElementsByClassName("mySlides");
+    let current = 0;
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      current = (current + 1) % slides.length;
+      slides[current].style.display = "block";
+    }
+    setInterval(showSlides, 2500);
+  </script>
+<script src="cart.js"></script></body>
+</html>
